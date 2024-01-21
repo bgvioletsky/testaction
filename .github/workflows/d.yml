@@ -27,15 +27,13 @@ jobs:
         run: |
           python ./download_image.py
       - name: commit
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
-            git config --global user.email 44770157@qq.com
-            git config --global user.name bgcode
-            git add .
-            git commit -m "update" -a
-      - name: Push changes to repository
-        uses: ad-m/github-push-action@master
-        with:
-          repository: bgvioletsky/testaction
-          branch: main
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git config --global user.email 44770157@qq.com
+          git config --global user.name bgcode
+          git add .
+          git commit -m "update" -a
+          git push
+      
           
