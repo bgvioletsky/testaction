@@ -2,9 +2,7 @@ name: Download
 
 
 on:
-    push:
-        branches:    
-          - master
+    [push]
 
 jobs:
   download-image:
