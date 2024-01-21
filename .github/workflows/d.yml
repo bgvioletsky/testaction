@@ -27,8 +27,8 @@ jobs:
       - name: Run script to download 
         run: |
           python ./download_image.py
-          - name: commit
-          run: |
+      - name: commit
+        run: |
             git config --global user.email 44770157@qq.com
             git config --global user.name bgcode
             git add .
