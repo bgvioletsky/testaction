@@ -33,10 +33,10 @@ jobs:
               git add .
               git commit -m "update" 
               git push origin <main>
-      # - name: Push changes
-      #   uses: ad-m/github-push-action@main
-      #   with:
-      #     github_token: ${{ secrets.bgcode }}
+      - name: Push changes
+        uses: ad-m/github-push-action@main
+        with:
+          github_token: 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
        
       
           
