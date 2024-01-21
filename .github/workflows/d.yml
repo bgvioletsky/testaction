@@ -1,8 +1,10 @@
 name: Download
 
+
 on:
-  schedule:
-    - cron: '0 0 * * *'  # 设置每天午夜执行脚本
+    push:
+        branches:    
+          - master
 
 jobs:
   download-image:
