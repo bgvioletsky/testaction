@@ -34,7 +34,7 @@ jobs:
                   git commit -m "update" 
           - name: Push to another repository
             env:
-            ACCESS_TOKEN: ${{ secrets.AAA_TOKEN }}
+                ACCESS_TOKEN: ${{ secrets.AAA_TOKEN }}
             run: |
                 git remote add target https://github.com/bgvioletsky/testaction.git
                 git push target HEAD:refs/heads/main
