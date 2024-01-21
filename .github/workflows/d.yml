@@ -32,11 +32,11 @@ jobs:
                   git config --global user.name bgcode
                   git add .
                   git commit -m "update" 
-          - name: Push changes
-            uses: ad-m/github-push-action@master
-            with:
-              # github_token: ${{ secrets.SSS }}
-              github_token: ${{ secrets.AAA_TOKEN }}
-              branch: main
+          - name: Push to another repository
+            env:
+            ACCESS_TOKEN: ${{ secrets.AAA_TOKEN }}
+            run: |
+                git remote add target https://github.com/bgvioletsky/testaction.git
+                git push target HEAD:refs/heads/main
           
           
