@@ -32,7 +32,7 @@ jobs:
             git config --global user.name bgcode
             git add .
             git commit -m "update" -a
-      - name: Run script to download 
-        uses: mikeal/publish-to-github-action@master
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
