@@ -11,15 +11,30 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Set up Python
+        with:
+            presist-credentials: false
+            fetch-depth: 0
+      - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: '3.8'
 
       - name: Install dependencies
-        run: pip install requests
+        run: |
+            python -m pip install --upgrade pip
+            pip install -r ./requirements.txt
 
       - name: Run script to download 
         run: |
-          python download_image.py
+          python ./download_image.py
+          - name: commit
+          run: |
+            git config --global user.email 44770157@qq.com
+            git config --global user.name bgcode
+            git add .
+            git commit -m "update" -a
+        
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
