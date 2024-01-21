@@ -35,7 +35,7 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: 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
+          github_token: ${{ secrets.SSS }}
        
       
           
