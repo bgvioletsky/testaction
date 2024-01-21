@@ -31,13 +31,13 @@ jobs:
                   git config --local user.email "44770157@qq.com"
                   git config --local user.name "bgcode"
                   git pull
-                  git add ./*
+                  git add .
                   git commit -m "update"
 
           - name:  Push changes
-            uses:  ad-m/github-push-action@master
+            uses:    ad-m/github-push-action@master
             with:  
-             github_token: ${{ secrets.MY_GIT_TOKEN }}
-             branch: main
+               github_token: ${{ secrets.MY_GIT_TOKEN }}
+               branch: main
           
           
