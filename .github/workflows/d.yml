@@ -2,7 +2,9 @@ name: Download
 
 
 on:
-    [push]
+  schedule:
+   - cron: '0 6 * * *'  # 本地时间每天的 06:00 执行
+
 
 jobs:
    build:

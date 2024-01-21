@@ -24,7 +24,13 @@ def main():
         image_names = list(set(image_names))
     else:
         image_names = []
-    
+    fileurl='img_url.json'
+    if os.path.exists(fileurl):
+        with open(fileurl, 'r') as f:
+            fileurls = json.load(f)
+        fileurls = list(set(fileurls))
+    else:
+        fileurls = []
     downloaded_names = []  # 新下载的图片名列表
     i = 10
     while i > 0:
@@ -43,6 +49,8 @@ def main():
         
         image_names.append(filename)
         downloaded_names.append('https://cdn.jsdelivr.net/gh/bgvioletsky/testaction/'+folder+'/'+filename)  # 将新下载的图片名添加到列表中
+        fileurls.append('https://cdn.jsdelivr.net/gh/bgvioletsky/testaction/'+folder+'/'+filename)  # 将新下载的图片名添加到列表中
+        
         file_path = os.path.join(folder, filename)
         download_image(url, file_path)
         
@@ -53,6 +61,9 @@ def main():
     with open(failename, 'w') as f:
         json.dump(image_names, f)
     
+    with open(fileurl, 'w') as f:
+        json.dump(fileurls, f)
+
     # 将新下载的图片名   imgname_filename = '${folder}/img_name.json'列表写入到指定的 JSON 文件中
     imgname_filename = os.path.join(folder, 'img_name.json')
     with open(imgname_filename, 'w') as f:
