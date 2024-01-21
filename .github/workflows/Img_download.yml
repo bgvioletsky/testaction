@@ -7,7 +7,7 @@ on:
 
 
 jobs:
-   build:
+   Img_download:
         runs-on: ubuntu-latest
 
         steps:
