@@ -32,7 +32,7 @@ jobs:
               git config --global user.name bgcode
               git add .
               git commit -m "update" 
-              git push origin <main>s
+              # git push origin <main>s
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
