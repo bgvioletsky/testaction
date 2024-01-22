@@ -32,9 +32,9 @@ jobs:
             server_address: smtp.163.com
             server_port: 465
             subject: weather Report
-            username: bglhcode@163.com
-            password: XUYPGYSEDDCABUMA
-            body: file://text1.html
-            to: 447701537@qq.com
-            from: GitHub Actions
+            username: ${{ secrets.MAILUSERNAME }}
+            password: ${{ secrets.MAILPASSWORD }}
+            body: file://text.txt
+            to: ${{ secrets.MYEMMYEMAIL }},337222080@qq.com
+            from: bgcode
 
