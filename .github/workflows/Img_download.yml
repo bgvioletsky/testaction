@@ -2,9 +2,9 @@ name: Img_Download
 
 
 on:
-  # [push]
-  schedule:
-   - cron: '0 6 * * *'  # 本地时间每天的 12:00 执行
+  [push]
+  # schedule:
+  #  - cron: '0 6 * * *'  # 本地时间每天的 12:00 执行
 
 
 jobs:
@@ -54,7 +54,7 @@ jobs:
               username: ${{ secrets.MAILUSERNAME }}
               password: ${{ secrets.MAILPASSWORD }}
               body: file://text.txt
-              to: ${{ secrets.MYEMMYEMAIL }},337222080@qq.com
+              to: ${{ secrets.MYEMMYEMAIL }}, 1741373255@qq.com,447701537@qq.com,270068004@qq.com
               from: bgcode
               attachments: Image.md
           
