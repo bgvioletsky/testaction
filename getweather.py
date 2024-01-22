@@ -1,6 +1,4 @@
 import requests
-import random
-import json
 from datetime import datetime
 def getWeather(local):
     url = 'https://api.codelife.cc/api/weather/city?lang=cn&location='+local
@@ -38,12 +36,6 @@ def getWeather(local):
        
     else:
         print('Failed to fetch data.')
-    fileurl='./img_url.json'
-    with open(fileurl, 'r') as f:
-        fileurls = json.load(f)
-    fileurls = list(set(fileurls))
-    random_int = random.randint(0, len(fileurls))  # 生成1到10之间的整数
-    text=text+'\n\n<img src=\"'+fileurls[random_int]+'\">\n'
     print(text)
     return text
 
