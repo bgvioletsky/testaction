@@ -24,20 +24,32 @@ def getWeather(local):
 ]
     if response.status_code == 200:
         data = response.json()
-        text="温度 : "+data['data']['now']['tmp']+"°\n气压 : "+data['data']['now']['pres']+"hPa\n天气 : "+data['data']['now']['cond_txt']+"\n风向 : "+data['data']['now']['wind_dir']+"\n湿度 : "+data['data']['now']['hum']+"%"
+        text="渠县天气\n温度 : "+data['data']['now']['tmp']+"°      气压 : "+data['data']['now']['pres']+"hPa      天气 : "+data['data']['now']['cond_txt']+"\n风向 : "+data['data']['now']['wind_dir']+"    湿度 : "+data['data']['now']['hum']+"%"
         shenhuo=data['data']['lifestyle']
         x=0
         for i in shenhuo:
-          text=text+"\n"+ list[x]+" : "+ i['brf']
+          if x % 3 == 0:
+                text=text+"\n"+ list[x]+" : "+ i['brf']+"    "
+          else:
+                 text=text+ list[x]+" : "+ i['brf']+"    "
+          
           x=x+1
-        print(text)
+       
     else:
         print('Failed to fetch data.')
+    txtsss = 'https://www.dmoe.cc/random.php?return=json'
+    header1s = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+    'Referer': 'https://www.dmoe.cc',
+}
+    turl = requests.get(txtsss,headers=header1s).json()
+    text=text+'\n\n![]('+turl['imgurl']+')\n'
+    print(text)
     return text
 
 
 def write_text_to_file(text):
-    with open('text.txt', 'w') as f:
+    with open('text.md', 'w') as f:
         f.write(text)
 def copy():
     now = datetime.now()  # 获取当前日期时间
