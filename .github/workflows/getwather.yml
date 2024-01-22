@@ -31,10 +31,10 @@ jobs:
           with:
             serveraddress: smtp.163.com
             serverport: 465
+            subject: weather Report
             username: bglhcode@163.com
             password: XUYPGYSEDDCABUMA
-            body: completed successfully!
-            html_body: text.html
+            body: file://text.txt
             to: 447701537@qq.com
             from: GitHub Actions
             content_type: text/html
