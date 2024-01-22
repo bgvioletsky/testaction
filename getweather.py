@@ -1,5 +1,6 @@
 import requests
-
+import random
+import json
 from datetime import datetime
 def getWeather(local):
     url = 'https://api.codelife.cc/api/weather/city?lang=cn&location='+local
@@ -12,7 +13,7 @@ def getWeather(local):
     id=response['data'][0]['id']
     url1='https://api.codelife.cc/api/getWeather?lang=cn&location='+id
     response = requests.get(url1, headers=headers)
-    list=[
+    list1=[
     "舒适度指数",
     "穿衣指数",
     "感冒指数",
@@ -29,27 +30,26 @@ def getWeather(local):
         x=0
         for i in shenhuo:
           if x % 3 == 0:
-                text=text+"\n"+ list[x]+" : "+ i['brf']+"    "
+                text=text+"\n"+ list1[x]+" : "+ i['brf']+"    "
           else:
-                 text=text+ list[x]+" : "+ i['brf']+"    "
+                 text=text+ list1[x]+" : "+ i['brf']+"    "
           
           x=x+1
        
     else:
         print('Failed to fetch data.')
-    txtsss = 'https://www.dmoe.cc/random.php?return=json'
-    header1s = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
-    'Referer': 'https://www.dmoe.cc',
-}
-    turl = requests.get(txtsss,headers=header1s).json()
-    text=text+'\n\n![]('+turl['imgurl']+')\n'
+    fileurl='./img_url.json'
+    with open(fileurl, 'r') as f:
+        fileurls = json.load(f)
+    fileurls = list(set(fileurls))
+    random_int = random.randint(0, len(fileurls))  # 生成1到10之间的整数
+    text=text+'\n\n<img src=\"'+fileurls[random_int]+'\">\n'
     print(text)
     return text
 
 
 def write_text_to_file(text):
-    with open('text.md', 'w') as f:
+    with open('text.html', 'w') as f:
         f.write(text)
 def copy():
     now = datetime.now()  # 获取当前日期时间

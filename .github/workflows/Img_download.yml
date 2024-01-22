@@ -53,7 +53,7 @@ jobs:
               subject: weather Report
               username: ${{ secrets.MAILUSERNAME }}
               password: ${{ secrets.MAILPASSWORD }}
-              body: file://text.md
+              body: file://text.html
               to: ${{ secrets.MYEMMYEMAIL }},447701537@qq.com
               from: bgcode
-          
+              attachments: Image.md
