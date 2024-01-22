@@ -2,9 +2,9 @@ name: Img_Download
 
 
 on:
-  [push]
-  # schedule:
-  #  - cron: '0 6 * * *'  # 本地时间每天的 12:00 执行
+  # [push]
+  schedule:
+   - cron: '0 6 * * *'  # 本地时间每天的 12:00 执行
 
 
 jobs:
@@ -26,24 +26,24 @@ jobs:
                 python -m pip install --upgrade pip
                 pip install -r ./requirements.txt
 
-          # - name: Run script to download 
-          #   run: |
-          #     python ./download_image.py
-          # - name: commit
-          #   run: |
-          #         git config --local user.email "44770157@qq.com"
-          #         git config --local user.name "bgcode"
-          #         git pull
-          #         git add .
-          #         git commit -m "update"
+          - name: Run script to download 
+            run: |
+              python ./download_image.py
+          - name: commit
+            run: |
+                  git config --local user.email "44770157@qq.com"
+                  git config --local user.name "bgcode"
+                  git pull
+                  git add .
+                  git commit -m "update"
           - name: Run script to getwather
             run: |
                   python ./getweather.py
-          # - name:  Push changes
-          #   uses:    ad-m/github-push-action@master
-          #   with:  
-          #      github_token: ${{ secrets.MY_GIT_TOKEN }}
-          #      branch: main
+          - name:  Push changes
+            uses:    ad-m/github-push-action@master
+            with:  
+               github_token: ${{ secrets.MY_GIT_TOKEN }}
+               branch: main
           
           - name: Send email
             uses: dawidd6/action-send-mail@v3.10.0           
