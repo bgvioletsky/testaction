@@ -35,6 +35,6 @@ def getWeather(local):
 
 
 def write_text_to_file(text):
-    with open('text.txt', 'w') as f:
+    with open('text.html', 'w') as f:
         f.write(text)
 write_text_to_file(getWeather('渠县'))
