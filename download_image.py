@@ -12,8 +12,7 @@ def download_image(url, file_path):
 def main():
     now = datetime.now()  # 获取当前日期时间
     date = now.date()  # 获取当前日期
-    # folder = str(date)  # 文件夹名称为日期字符串
-    folder='sdad'
+    folder = str(date)  # 文件夹名称为日期字符串
     if not os.path.exists(folder):  # 如果文件夹不存在，则创建文件夹
         os.makedirs(folder)
     
@@ -33,7 +32,7 @@ def main():
     else:
         fileurls = []
     downloaded_names = []  # 新下载的图片名列表
-    i = 5
+    i = 20
     while i > 0:
         time.sleep(1)
         url = 'https://www.dmoe.cc/random.php?return=json'

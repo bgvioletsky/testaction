@@ -2,9 +2,9 @@ name: Img_Download
 
 
 on:
-  [push]
-  # schedule:
-  #  - cron: '0 6 * * *'  # 本地时间每天的 06:00 执行
+  # [push]
+  schedule:
+   - cron: '0 6 * * *'  # 本地时间每天的 12:00 执行
 
 
 jobs:
