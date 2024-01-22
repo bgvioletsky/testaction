@@ -42,7 +42,7 @@ def write_text_to_file(text):
 def copy():
     now = datetime.now()  # 获取当前日期时间
     date = now.date()  # 获取当前日期
-    folder = 'kk'  # 文件夹名称为日期字符串
+    folder = str(date)  # 文件夹名称为日期字符串
     source_file = './'+folder+'/README.md'
     destination_file = './Image.md'
     with open(source_file, 'rb') as source:
