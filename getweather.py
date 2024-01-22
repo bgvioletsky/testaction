@@ -1,4 +1,6 @@
 import requests
+
+from datetime import datetime
 def getWeather(local):
     url = 'https://api.codelife.cc/api/weather/city?lang=cn&location='+local
     headers = {
@@ -37,4 +39,15 @@ def getWeather(local):
 def write_text_to_file(text):
     with open('text.txt', 'w') as f:
         f.write(text)
+def copy():
+    now = datetime.now()  # 获取当前日期时间
+    date = now.date()  # 获取当前日期
+    folder = str(date)  # 文件夹名称为日期字符串
+    source_file = './'+folder+'/README.md'
+    destination_file = './README1.md'
+    with open(source_file, 'rb') as source:
+        with open(destination_file, 'wb') as destination:
+            destination.write(source.read())
+
 write_text_to_file(getWeather('渠县'))
+copy()

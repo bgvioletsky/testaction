@@ -2,9 +2,9 @@ name: 'GitHub Actions Weather Bot'
 
 
 on:
-#   [push]
- schedule:
-    - cron: '0 21 * * *'
+  [push]
+#  schedule:
+#     - cron: '0 21 * * *'
 
 jobs:
     GetWeather:
@@ -23,7 +23,7 @@ jobs:
                 python -m pip install --upgrade pip
                 pip install -r ./requirements.txt
 
-        - name: Run script to download 
+        - name: Run script to getwather
           run: |
                python ./getweather.py
         - name: Send email
@@ -35,6 +35,7 @@ jobs:
             username: ${{ secrets.MAILUSERNAME }}
             password: ${{ secrets.MAILPASSWORD }}
             body: file://text.txt
-            to: ${{ secrets.MYEMMYEMAIL }},337222080@qq.com
+            to: ${{ secrets.MYEMMYEMAIL }}
             from: bgcode
+            attachments: README1.md
 

@@ -35,11 +35,25 @@ jobs:
                   git pull
                   git add .
                   git commit -m "update"
-
+          - name: Run script to getwather
+            run: |
+                  python ./getweather.py
           - name:  Push changes
             uses:    ad-m/github-push-action@master
             with:  
                github_token: ${{ secrets.MY_GIT_TOKEN }}
                branch: main
           
+          - name: Send email
+            uses: dawidd6/action-send-mail@v3.10.0           
+            with:
+              server_address: smtp.163.com
+              server_port: 465
+              subject: weather Report
+              username: ${{ secrets.MAILUSERNAME }}
+              password: ${{ secrets.MAILPASSWORD }}
+              body: file://text.txt
+              to: ${{ secrets.MYEMMYEMAIL }},337222080@qq.com
+              from: bgcode
+              attachments: README1.md
           
