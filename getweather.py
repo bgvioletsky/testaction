@@ -44,7 +44,7 @@ def copy():
     date = now.date()  # 获取当前日期
     folder = str(date)  # 文件夹名称为日期字符串
     source_file = './'+folder+'/README.md'
-    destination_file = './README1.md'
+    destination_file = './Image.md'
     with open(source_file, 'rb') as source:
         with open(destination_file, 'wb') as destination:
             destination.write(source.read())
