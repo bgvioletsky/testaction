@@ -33,9 +33,8 @@ jobs:
             serverport: 465
             username: bglhcode@163.com
             password: XUYPGYSEDDCABUMA
-            subject: Shanghai Weather Report
             body: completed successfully!
-            html_body: file://text.html
+            html_body: text.html
             to: 447701537@qq.com
             from: GitHub Actions
             content_type: text/html
