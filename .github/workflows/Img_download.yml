@@ -2,7 +2,9 @@ name: Img_Download
 
 
 on:
-  # [push]
+  push:
+    branches:
+      - main
   schedule:
    - cron: '0 22 * * *'  # 本地时间每天的 12:00 执行
 env:
