@@ -13,7 +13,7 @@ def main():
     now = datetime.now()  # 获取当前日期时间
     date = now.date()  # 获取当前日期
     folder = str(date)  # 文件夹名称为日期字符串
-    # folder='kk'
+    # folder='2024-01-29'
     if not os.path.exists(folder):  # 如果文件夹不存在，则创建文件夹
         os.makedirs(folder)
     
