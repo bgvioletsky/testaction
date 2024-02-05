@@ -67,7 +67,7 @@ def main():
     #     json.dump(fileurls, f)
 
     # 将新下载的图片名   imgname_filename = '${folder}/img_name.json'列表写入到指定的 JSON 文件中
-    imgname_filename = os.path.join(folder, 'img_url.json')
+    imgname_filename = os.path.join(folder, 'img_name.json')
     with open(imgname_filename, 'w') as f:
         json.dump(downloaded_names, f)
     # 创建一个 Markdown 文件，并写入一些内容

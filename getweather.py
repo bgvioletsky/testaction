@@ -5,6 +5,9 @@ def getWeather(local):
     now = datetime.now()
     formatted_date = now.strftime("%m-%d")
     time=now.strftime("%H:%M")
+    date = now.date()  # 获取当前日期
+    # folder = str(date)
+    folder='2024-01-21'
     url = 'https://api.codelife.cc/api/weather/city?lang=cn&location='+local
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36',
@@ -39,7 +42,7 @@ def getWeather(local):
         tmp_max=daily_forecast['tmp_max']
         ss=daily_forecast['ss']
         sr=daily_forecast['sr']
-        fileurl='img_url.json'
+        fileurl=folder+'/img_name.json'
         with open(fileurl, 'r') as f:
             fileurls = json.load(f)
         imgurl = list(set(fileurls))
