@@ -1,0 +1,1 @@
+find . -type f -name "*.jpg" -exec sh -c 'mkdir -p "$(dirname "{}")" && echo "{ \"url\": \"$(basename "{}")\" }" > "$(dirname "{}")/urlk.json"' \;
