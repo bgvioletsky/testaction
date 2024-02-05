@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* svg{width: 25px;height: 25px;} */
+        .d-flex-between {
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        div {
+            background-color: rgb(154, 207, 254);
+            border-radius: 10px;
+            /* border: 2px solid #ff0000; */
+        }
+
+        .relative {
+            position: relative
+        }
+
+        .mt20 {
+            margin-top: 20px
+        }
+
+        .mb20 {
+            margin-bottom: 20px
+        }
+
+        .weather-now-tmp {
+            font-size: 80px;
+            line-height: 80px;
+            height: 80px
+        }
+
+        .ml20 {
+            margin-left: 20px
+        }
+
+        .f13 {
+            font-size: 13px
+        }
+
+        .d-icon svg {
+            height: 1.5em;
+            width: 1.5em;
+        }
+
+        .d-layout {
+            border-radius: 4px;
+            border: 1px;
+            border-radius: 10px;
+        }
+
+
+        .d-flex-y {
+            display: flex;
+            align-items: center
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-layout h-full">
+        <div class="app-weather-body d-scrollbar-hide h-full relative overflow-y-auto d-layout-content">
+            <div class="d-flex-between">
+                <div class="f12"><span>四川省&nbsp;·&nbsp;</span><span>渠县</span><span class="ml5">晴</span><span
+                        class="f12 ml20 weather-pubtime">发布于:02-05 15:04</span></div>
+            </div>
+            <div class="mt20 mb20 weather-nowtmp d-flex-y">
+                <span class="weather-now-tmp block">8°</span>
+                <div class="ml20 f13">
+                    <p class="weather-aqi">
+                        <i class="d-icon f20">
+                            <img class="mr5" src="https://cdn.jsdelivr.net/gh/Codebglh/img/test/yezi.svg"
+                            style="width: 18px; height: 18px; vertical-align: -4px;">
+                        </i> 优/40
+                    </p>
+                    <p class="mt10">
+                        <img class="mr5" src="https://cdn.jsdelivr.net/gh/Codebglh/img/test/100-fill.svg"
+                            style="width: 18px; height: 18px; vertical-align: -4px;">
+                        <span class="mr10">晴</span>
+                        <span class="mr10">北风</span>
+                        <span class="mr10">1级</span>
+                    </p>
+                </div>
+            </div>
+            <div class="f13" style="color: rgba(227, 110, 110, 0.82);">预计未来两小时无降水</div>
+            <div class="mt10 mb10 f13 weather-info" style="line-height: 18px; color: rgba(225, 108, 108, 0.82);">
+                <span>温度 5°~9°</span>
+                <span>湿度 73%</span>
+                <span>气压 985hPa</span>
+                <span>降水 0.0mm</span>
+                <span>日出&nbsp;07:42</span>
+                <span>日落&nbsp;18:31</span>
+            </div>
+        </div>
+        <img src="https://cdn.jsdelivr.net/gh/bgvioletsky/testaction/2024-01-30/a15b4afegy1fmvjlgdxxgj21hc0u04qp.jpg"
+            width="500" height="300" style="border-radius: 10px;">
+    </div>
+</body>
+
+</html>

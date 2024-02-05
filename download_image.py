@@ -6,6 +6,7 @@ import os
 
 def download_image(url, file_path):
     response = requests.get(url)  # 发送GET请求获取响应对象
+    print(url)
     with open(file_path, 'wb') as f:  # 以二进制写入模式打开文件
         f.write(response.content)  # 将响应内容写入文件
 
@@ -35,7 +36,7 @@ def main():
     downloaded_names = []  # 新下载的图片名列表
     i = 20
     while i > 0:
-        time.sleep(1)
+        time.sleep(5)
         url = 'https://www.dmoe.cc/random.php?return=json'
         headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
@@ -57,16 +58,16 @@ def main():
         
         i -= 1
     
-    # 将本次下载的图片名列表与之前的图片名列表进行合并，并写回到 JSON 文件中
-    image_names = list(set(image_names))  # 去除重复项
-    with open(failename, 'w') as f:
-        json.dump(image_names, f)
+    # # 将本次下载的图片名列表与之前的图片名列表进行合并，并写回到 JSON 文件中
+    # image_names = list(set(image_names))  # 去除重复项
+    # with open(failename, 'w') as f:
+    #     json.dump(image_names, f)
     
-    with open(fileurl, 'w') as f:
-        json.dump(fileurls, f)
+    # with open(fileurl, 'w') as f:
+    #     json.dump(fileurls, f)
 
     # 将新下载的图片名   imgname_filename = '${folder}/img_name.json'列表写入到指定的 JSON 文件中
-    imgname_filename = os.path.join(folder, 'img_name.json')
+    imgname_filename = os.path.join(folder, 'img_url.json')
     with open(imgname_filename, 'w') as f:
         json.dump(downloaded_names, f)
     # 创建一个 Markdown 文件，并写入一些内容
