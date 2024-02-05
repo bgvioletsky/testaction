@@ -129,3 +129,4 @@ jobs:
                       </html>
               to: ${{ secrets.MYEMMYEMAIL }}
               from: bgcode
+              content_type: text/html
