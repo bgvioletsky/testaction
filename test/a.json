@@ -1,0 +1,179 @@
+{
+    "msg": "请求成功",
+    "data": {
+        "sun": {
+            "set": "18:31",
+            "rise": "07:42"
+        },
+        "status": "ok",
+        "rain": {
+            "txt": "未来两小时无降水"
+        },
+        "now": {
+            "wind_sc": "2",
+            "wind_dir": "北风",
+            "tmp": "7",
+            "pres": "985",
+            "pcpn": "0.0",
+            "hum": "74",
+            "cond_txt": "阴",
+            "cond_code": "104"
+        },
+        "lifestyle": [
+            {
+                "type": "comf",
+                "brf": "较舒适"
+            },
+            {
+                "type": "drsg",
+                "brf": "较冷"
+            },
+            {
+                "type": "flu",
+                "brf": "易发"
+            },
+            {
+                "type": "trav",
+                "brf": "适宜"
+            },
+            {
+                "type": "uv",
+                "brf": "弱"
+            },
+            {
+                "type": "cw",
+                "brf": "不宜"
+            },
+            {
+                "type": "fsh",
+                "brf": "不宜"
+            }
+        ],
+        "daily_forecast": [
+            {
+                "wind_sc": "1-3",
+                "wind_dir_n": "北风",
+                "wind_dir_d": "北风",
+                "wind_dir": "北风",
+                "tmp_min": "5",
+                "tmp_max": "9",
+                "ss": "18:31",
+                "sr": "07:42",
+                "ms": "13:25",
+                "mr": "03:18",
+                "date": "2024-02-05",
+                "cond_txt_n": "小雨",
+                "cond_txt_d": "阴",
+                "cond_code_n": "305",
+                "cond_code_d": "104"
+            },
+            {
+                "wind_sc": "1-3",
+                "wind_dir_n": "北风",
+                "wind_dir_d": "北风",
+                "wind_dir": "南风",
+                "tmp_min": "5",
+                "tmp_max": "8",
+                "ss": "18:32",
+                "sr": "07:41",
+                "ms": "14:18",
+                "mr": "04:23",
+                "date": "2024-02-06",
+                "cond_txt_n": "小雨",
+                "cond_txt_d": "小雨",
+                "cond_code_n": "305",
+                "cond_code_d": "305"
+            },
+            {
+                "wind_sc": "1-3",
+                "wind_dir_n": "北风",
+                "wind_dir_d": "北风",
+                "wind_dir": "南风",
+                "tmp_min": "4",
+                "tmp_max": "7",
+                "ss": "18:33",
+                "sr": "07:40",
+                "ms": "15:21",
+                "mr": "05:27",
+                "date": "2024-02-07",
+                "cond_txt_n": "阴",
+                "cond_txt_d": "小雨",
+                "cond_code_n": "104",
+                "cond_code_d": "305"
+            },
+            {
+                "wind_sc": "1-3",
+                "wind_dir_n": "北风",
+                "wind_dir_d": "北风",
+                "wind_dir": "南风",
+                "tmp_min": "5",
+                "tmp_max": "10",
+                "ss": "18:34",
+                "sr": "07:40",
+                "ms": "16:31",
+                "mr": "06:25",
+                "date": "2024-02-08",
+                "cond_txt_n": "阴",
+                "cond_txt_d": "阴",
+                "cond_code_n": "104",
+                "cond_code_d": "104"
+            },
+            {
+                "wind_sc": "1-3",
+                "wind_dir_n": "北风",
+                "wind_dir_d": "北风",
+                "wind_dir": "北风",
+                "tmp_min": "5",
+                "tmp_max": "12",
+                "ss": "18:34",
+                "sr": "07:39",
+                "ms": "17:46",
+                "mr": "07:17",
+                "date": "2024-02-09",
+                "cond_txt_n": "阴",
+                "cond_txt_d": "阴",
+                "cond_code_n": "104",
+                "cond_code_d": "104"
+            },
+            {
+                "wind_sc": "1-3",
+                "wind_dir_n": "北风",
+                "wind_dir_d": "北风",
+                "wind_dir": "北风",
+                "tmp_min": "4",
+                "tmp_max": "15",
+                "ss": "18:35",
+                "sr": "07:38",
+                "ms": "19:00",
+                "mr": "08:01",
+                "date": "2024-02-10",
+                "cond_txt_n": "阴",
+                "cond_txt_d": "阴",
+                "cond_code_n": "104",
+                "cond_code_d": "104"
+            },
+            {
+                "wind_sc": "1-3",
+                "wind_dir_n": "北风",
+                "wind_dir_d": "北风",
+                "wind_dir": "北风",
+                "tmp_min": "5",
+                "tmp_max": "15",
+                "ss": "18:36",
+                "sr": "07:37",
+                "ms": "20:12",
+                "mr": "08:39",
+                "date": "2024-02-11",
+                "cond_txt_n": "阴",
+                "cond_txt_d": "阴",
+                "cond_code_n": "104",
+                "cond_code_d": "104"
+            }
+        ],
+        "air_now_city": {
+            "qlty": "优",
+            "aqi": "48"
+        }
+    },
+    "code": 200
+}
