@@ -6,8 +6,8 @@ def getWeather(local):
     formatted_date = now.strftime("%m-%d")
     time=now.strftime("%H:%M")
     date = now.date()  # 获取当前日期
-    # folder = str(date)
-    folder='2024-01-21'
+    folder = str(date)
+    # folder='2024-01-21'
     url = 'https://api.codelife.cc/api/weather/city?lang=cn&location='+local
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36',
