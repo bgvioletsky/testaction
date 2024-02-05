@@ -23,7 +23,7 @@ jobs:
               subject: weather Report
               username: ${{ secrets.MAILUSERNAME }}
               password: ${{ secrets.MAILPASSWORD }}
-              body: ./test/test.html
+              body: file://test/test.html
               to: ${{ secrets.MYEMMYEMAIL }}
               from: bgcode
               attachments: Image.md
