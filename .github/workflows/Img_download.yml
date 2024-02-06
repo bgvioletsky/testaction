@@ -45,19 +45,3 @@ jobs:
             with:  
                github_token: ${{ secrets.MY_GIT_TOKEN }}
                branch: main
-          - name: Run script to getwather
-            run: |
-                     python ./getweather.py
-          - name: Send email
-            uses: dawidd6/action-send-mail@v3.10.0           
-            with:
-              server_address: smtp.163.com
-              server_port: 465
-              subject: weather Report
-              username: ${{ secrets.MAILUSERNAME }}
-              password: ${{ secrets.MAILPASSWORD }}
-              html_body: file://text.html
-              to: ${{ secrets.MYEMMYEMAIL }}
-              from: bgcode
-              attachments: Image.md
-              content_type: text/html

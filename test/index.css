@@ -18,7 +18,7 @@ li {
   text-align: -webkit-match-parent;
 }
 .bgcode {
-  width: 650px;
+  width: 100%;
 }
 .life {
   padding: 12px;
@@ -29,7 +29,9 @@ li {
   line-height: 16px;
 }
 .timg {
-  width: 300px; /* height: 100px; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 让图片填充整个容器，可能会裁剪部分内容 */
   border-radius: 6px;
 }
 .simg {
@@ -84,18 +86,18 @@ ul {
   align-items: center;
 }
 .kkk {
-  width: 600px;
+  width: 100%;
 }
 .c1 {
   color: #5fc7fb;
   padding: 8px;
 }
 .con {
-  width: 650px;
+  width: 100%;
 }
 .sssa {
   font-size: 12px;
-  margin-bottom: -21px;
+  margin-bottom: -10px;
   box-sizing: border-box;
   padding-top: 20px;
   padding-left: 10px;
@@ -106,7 +108,7 @@ ul {
 }
 .tpimg {
   display: grid;
-  grid-template-columns: repeat(2, 300px);
+  grid-template-columns: repeat(2, 49%);
   margin: 20px;
   align-items: center;
   grid-gap: 10px;
