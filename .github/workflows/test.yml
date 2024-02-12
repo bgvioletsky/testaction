@@ -2,9 +2,9 @@ name: Img_Download
 
 
 on:
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
   schedule:
    - cron: '5 16 * * *'  # 本地时间每天的 1:00 执行
 env:
@@ -18,7 +18,6 @@ jobs:
           - name: Checkout code
             uses: actions/checkout@v2
             with:
-               
                 fetch-depth: 0
           - name: Set up Python 3.8
             uses: actions/setup-python@v2
@@ -33,8 +32,12 @@ jobs:
           - name: Run script to download 
             run: |
               python ./download_image.py
+          
           - name: commit
             run: |
+                  git clone https://github.com/bgvioletsky/action1.git other_repo_temp
+                  cp -r * other_repo_temp/
+                  cd other_repo_temp
                   git config --local user.email "44770157@qq.com"
                   git config --local user.name "bgcode"
                   git pull
@@ -45,3 +48,4 @@ jobs:
             with:  
                github_token: ${{ secrets.MY_GIT_TOKEN }}
                branch: main
+               
